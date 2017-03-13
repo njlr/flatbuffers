@@ -1,0 +1,16 @@
+cxx_binary(
+  name = 'sample-text',
+  header_namespace = '',
+  headers = subdir_glob([
+    ('', '*.h'),
+  ]),
+  srcs = [
+    'sample_text.cpp',
+  ],
+  compiler_flags = [
+    '-std=c++14',
+  ],
+  deps = [
+    '//:flatbuffers',
+  ],
+)
